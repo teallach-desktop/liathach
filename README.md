@@ -1,5 +1,17 @@
 # Liatach
 
+## Introduction
+
+This project provides a reproducible environment for running and evaluating the
+[labwc] Wayland Compositor. It is intended for users who:
+
+1. Find it difficult to install labwc because their OS/Distribution does not
+   have the required dependencies.
+2. Do not want to spend time setting up the larger system which a compositor
+   always has to be part of in order to function and do anything useful.
+3. Cannot be bothered do configure the compositor itself or the clients required
+   to provide a complete desktop shell experience.
+
 ## Install Qemu
 
 Install curl and qemu from your OS/Distribution repositories. For example on
