@@ -11,7 +11,15 @@ doas sed -i '/.*community.*/s/^#//g' /etc/apk/repositories
 doas apk update
 
 # Install the basics to run the compositor
-doas apk add labwc ttf-dejavu seatd mesa-dri-gallium foot
+doas apk add \
+	labwc \
+	ttf-dejavu \
+	seatd \
+	mesa-dri-gallium \
+	foot \
+	dbus \
+	dbus-x11 \
+	xwayland
 
 setup-devd udev
 doas rc-update add seatd
@@ -25,5 +33,5 @@ mkdir ~/bin
 
 cp ~/liatach/dotfiles/.profile ~
 
-# At this point logout/login and then run `labwc -s foot`
+# At this point logout/login and then run `dbus-launch labwc -s foot`
 

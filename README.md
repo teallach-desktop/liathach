@@ -21,9 +21,10 @@ cd liatach
 The first time this script is run, an Alpine iso will be downloaded. Beyond
 that the script will merely start qemu and can be called repeatedly.
 
-In the guest environment (in Qemu), run the commands below.  In the
-setup-alpine script choose 'vda' and 'sys' in response to the desk questions.
-Use whatever username you prefer instead of `$USER`
+In the guest environment (in Qemu), login as `root` (no passwords) and then run
+the commands below.  In the setup-alpine script choose 'vda' and 'sys' in
+response to the disk questions.  Use whatever username you prefer instead of
+`$USER`
 
 ```
 setup-alpine

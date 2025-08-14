@@ -1,6 +1,6 @@
 #!/bin/sh
 
-url=https://uk.alpinelinux.org/alpine/v3.19/releases/x86_64/alpine-standard-3.19.1-x86_64.iso
+url=https://uk.alpinelinux.org/alpine/v3.22/releases/x86_64/alpine-standard-3.22.1-x86_64.iso
 filename=alpine.qcow2
 
 if ! [ -f $(basename $url) ]; then
