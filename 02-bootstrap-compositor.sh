@@ -31,7 +31,7 @@ doas adduser "$1" input
 mkdir ~/.run
 mkdir ~/bin
 
-cp ~/liatach/dotfiles/.profile ~
+cp dotfiles/.profile ~
 
 # At this point logout/login and then run `dbus-launch labwc -s foot`
 

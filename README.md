@@ -1,4 +1,4 @@
-# Liatach
+# Liathach
 
 ## Introduction
 
@@ -25,8 +25,8 @@ sudo pacman -S curl qemu-full
 ## Install Alpine
 
 ```
-git clone https://github.com/johanmalm/liatach.git
-cd liatach
+git clone https://github.com/johanmalm/liathach.git
+cd liathach
 ./01-start-qemu.sh
 ```
 
@@ -54,8 +54,8 @@ Logout.
 Login as $USER and run the following.
 
 ```
-git clone https://github.com/johanmalm/liatach.git
-cd liatach
+git clone https://github.com/johanmalm/liathach.git
+cd liathach
 ./02-bootstrap-compositor.sh $USER
 ```
 
