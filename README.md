@@ -3,14 +3,13 @@
 ## Introduction
 
 This project provides a reproducible environment for running and evaluating the
-[labwc] Wayland Compositor. It is intended for users who:
+Desktop Environment teallach. It is intended for users who:
 
-1. Find it difficult to install labwc because their OS/Distribution does not
-   have the required dependencies.
+1. Find it difficult to install it because their OS/Distribution does not have
+   the required dependencies.
 2. Do not want to spend time setting up the larger system which a compositor
-   always has to be part of in order to function and do anything useful.
-3. Cannot be bothered do configure the compositor itself or the clients required
-   to provide a complete desktop shell experience.
+   generally has to be part of in order to function and do anything useful.
+3. Want to evaluate teallach somewhere other than their daily driver.
 
 ## Install Qemu
 
@@ -25,7 +24,7 @@ sudo pacman -S curl qemu-full
 ## Install Alpine
 
 ```
-git clone https://github.com/johanmalm/liathach.git
+git clone https://github.com/teallach-desktop/liathach.git
 cd liathach
 ./01-start-qemu.sh
 ```
@@ -54,12 +53,14 @@ Logout.
 Login as $USER and run the following.
 
 ```
-git clone https://github.com/johanmalm/liathach.git
+git clone https://github.com/teallach-desktop/liathach.git
 cd liathach
 ./02-bootstrap-compositor.sh $USER
 ```
 
-Logout. Then log back in again and issue `labwc -s foot`.
+Logout. Then log back in again and issue `dbus-launch labwc -s foot`.
+
+Then run the scripts beginning with 03 and 04.
 
 [labwc]: https://github.com/labwc/labwc.git
 

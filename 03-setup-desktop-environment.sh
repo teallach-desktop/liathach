@@ -7,6 +7,9 @@ doas apk add \
 	glib-dev \
 	qt6-qtbase \
 	qt6-qttools \
+	qt6-qtwayland \
+	libsfdo \
+	layer-shell-qt \
 	libxml2 \
 	dialog \
 	bash
@@ -15,6 +18,9 @@ doas apk add \
 doas apk add \
 	qt6-qtbase-dev \
 	qt6-qttools-dev \
+	qt6-qtwayland-dev \
+	layer-shell-qt-dev \
+	libsfdo-dev \
 	libxml2-dev \
 	perl \
 	cmake
@@ -28,15 +34,5 @@ doas apk add \
 	wlr-randr \
 	grim
 
-# Teallach desktop applications
-doas apk add \
-	ristretto \
-	mousepad
-
-# Stuff that I just find convenient to have
-doas apk add \
-	vim \
-	mc \
-	gimp \
-	imv
-
+# kanshi
+# slurp
