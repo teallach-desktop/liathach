@@ -31,7 +31,11 @@ doas adduser "$1" input
 mkdir ~/.run
 mkdir ~/bin
 
-cp dotfiles/.profile ~
+cat >> "$HOME/.profile" << EOF
+export XDG_RUNTIME_DIR=~/.run
+export PATH=$HOME/bin:$PATH
+dbus-launch labwc
+EOF
 
 # At this point logout/login and then run `dbus-launch labwc -s foot`
 
