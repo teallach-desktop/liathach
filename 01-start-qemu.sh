@@ -1,14 +1,23 @@
 #!/bin/sh
 
 url=https://uk.alpinelinux.org/alpine/v3.22/releases/x86_64/alpine-standard-3.22.1-x86_64.iso
-filename=alpine.qcow2
 
-if ! [ -f $(basename $url) ]; then
-	curl -O ${url}
+# By default we just use the Alpine iso, but this script can also be used to
+# with any other (already downloaded) iso with the syntax:
+# ./01-start-qmenu.sh <filename>
+if [ $# = 0 ]; then
+	iso="$(basename $url)"
+	if ! [ -f "$iso" ]; then
+		curl -O "${url}"
+	fi
+else
+	iso="$1"
 fi
 
-if ! [ -f $filename ]; then
-	qemu-img create -f qcow2 alpine.qcow2 16G
+filename="$iso.qcow2"
+
+if ! [ -f "$filename" ]; then
+	qemu-img create -f qcow2 "$filename" 16G
 fi
 
 qemu-system-x86_64 \
@@ -16,7 +25,7 @@ qemu-system-x86_64 \
 	-m 2048 \
 	-nic user,model=virtio \
 	-drive file=$filename,media=disk,if=virtio \
-	-cdrom $(basename $url) \
+	-cdrom "$iso" \
 	-display gtk \
 	-cpu host \
 	-vga qxl
