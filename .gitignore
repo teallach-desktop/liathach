@@ -1,2 +1,2 @@
-alpine.qcow2
-alpine-standard*
+*.qcow2
+*.iso
