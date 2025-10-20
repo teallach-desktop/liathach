@@ -21,7 +21,7 @@ doas apk add \
 	dbus-x11 \
 	xwayland
 
-setup-devd udev
+doas setup-devd udev
 doas rc-update add seatd
 doas rc-service seatd start
 doas adduser "$1" seat
